@@ -14,7 +14,7 @@ export function TodoInput({ addTask }: TodoInputProps) {
     if (!task) return ;
 
     addTask(task);
-    setTask(task);
+    setTask('');
   }
 
   return (
