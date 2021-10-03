@@ -11,11 +11,10 @@ export function TodoInput({ addTask }: TodoInputProps) {
 
   function handleAddNewTask() {
     //TODO - Call addTask if task not empty and clean input value
-    if (addTask.length > 0) {
-      addTask(task);
-      setTask('');
-    }
-    return;
+    if (!task) return ;
+
+    addTask(task);
+    setTask(task);
   }
 
   return (
