@@ -42,10 +42,20 @@ export function Home() {
   }
 
   function handleRemoveTask(id: number) {
-    //TODO - remove task from state
-    setTasks(oldTasks => oldTasks.filter(
-      task => task.id !== id
-    ))
+    Alert.alert(
+      "Remover item",
+      "Tem certeza que você deseja remover esse item?",
+      [
+        { text: "Não" },
+        { text: "Sim", onPress: () => (
+            //TODO - remove task from state
+            setTasks(oldTasks => oldTasks.filter(
+              task => task.id !== id
+            ))
+          )
+        }
+      ]
+    );
   }
 
   return (
